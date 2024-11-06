@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://www.paypalobjects.com/webstatic/en_US/developer/docs/css/cardfields.css"
+        />
+        <title>PayPal JS SDK Advanced Integration Demo</title>
+        <!-- initializing sandbox SDK to render components for specific DE market (sandbox only: buyer-country not fit production environment) smart buttons, card-fields and local payment methods APMs-->
+        <script
+        src="https://www.paypal.com/sdk/js?client-id=AaqQtQtFIFk6p_uXGL60XYR3nlP1at1uMqf87bvyToZxDN09S9PcVhkjm62GUSSQX8riA6wzcdpGrZMT&buyer-country=DE&currency=EUR&components=buttons,card-fields&enable-funding=paylater"
+            data-sdk-integration-source="developer-studio"
+        ></script>
+    </head>
+    <body>
+        <!-- Container for PayPal smart buttons  -->
+        <div id="paypal-button-container" class="paypal-button-container"></div>
+        <!-- Containers for Card Fields hosted by PayPal -->
+        <div id="card-form" class="card_container">
+            <div id="card-name-field-container"></div>
+            <div id="card-number-field-container"></div>
+            <div id="card-expiry-field-container"></div>
+            <div id="card-cvv-field-container"></div>
+        <br /><br />
+            <button id="card-field-submit-button" type="button">
+                Pay now with Card
+            </button>
+        </div>
+        <p id="result-message"></p>
+
+        <button id="refund" type="button">
+          To Refund a Payment
+        </button>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
+
+    
+ 
